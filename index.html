@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+</head>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: black;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      
+    }
+  .container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 500px;
+}
+h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+</style>
+<body>
+    <div class="container">
+    <h1>Gaurav Institute of Technology</h1>
+    <form id="registrationForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+
+        <label for="phone">Phone number:</label>
+        <input type="text" id="phone" name="phone">
+
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password">
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="text" id="confirmPassword" name="confirmPassword">
+
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+</body>
+</html>
+
+<?php
+// Database connection code here (e.g., using mysqli)
+
+if(isset($_POST['submit'])){
+    // Retrieve form data
+    $firstName = $_POST['first_name'];
+    $lastName = $_POST['last_name'];
+    $rollId = $_POST['roll_id'];
+    $password = $_POST['password'];
+    $confirmPassword = $_POST['confirm_password'];
+    $contactNumber = $_POST['contact_number'];
+
+    // Form validation (add your validation logic here)
+
+    // Insert student details into the database
+    // Perform database query here to insert data
+    
+    // Delete student record based on Roll no/ID
+    // Perform delete operation here if needed
+
+    // Update student details based on Roll no/ID
+    // Perform update operation here if needed
+
+    // Retrieve and display student records in tabular format
+    // Perform database query to retrieve and display data
+    
+    // Redirect back to the form after processing
+    header("Location: index.html");
+    exit();
+}
+?>
